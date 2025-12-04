@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PersianTextAnalyzer</name>
+    </assembly>
+    <members>
+        <member name="M:PersianTextAnalyzer.Controllers.HunspellController.CheckText">
+            <summary>
+                This solution isn't exact for pertain text, but it can spell simple word like "حزف" not "حذفش کردم" this word is
+                true but Hunspell get mistake from this
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
