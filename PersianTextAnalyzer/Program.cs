@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen(s =>
     });
 });
 
-builder.Services.AddHttpClient<SpalingController>(client => { client.Timeout = TimeSpan.FromSeconds(10); });
+builder.Services.AddHttpClient<SaplingController>(client => { client.Timeout = TimeSpan.FromSeconds(10); });
 
 // Add services to the container.
 

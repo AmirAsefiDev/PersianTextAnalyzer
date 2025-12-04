@@ -6,20 +6,20 @@ using PersianTextAnalyzer.Dto;
 
 namespace PersianTextAnalyzer.Controllers;
 
-[Route("api/spaling-check")]
+[Route("api/sapling-check")]
 [ApiController]
-public class SpalingController : ControllerBase
+public class SaplingController : ControllerBase
 {
     private readonly string _apiKey = "JIOUEC3RHPHQ78AJ9QEEM42W9NASUWI5";
     private readonly HttpClient _httpClient;
 
-    public SpalingController(HttpClient httpClient)
+    public SaplingController(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
 
     /// <summary>
-    ///     Spaling is the Best approach for problem of finding incorrect words inside the text.
+    ///     Sapling is the Best approach for problem of finding incorrect words inside the text.
     ///     I tried it,it's exactly find the incorrect word and say alternative for that word.
     /// </summary>
     /// <returns></returns>
@@ -80,7 +80,7 @@ public class SpalingController : ControllerBase
                 Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
                 PropertyNameCaseInsensitive = true
             };
-            var result = JsonSerializer.Deserialize<SpalingResponse>(responseContent, options);
+            var result = JsonSerializer.Deserialize<SaplingResponse>(responseContent, options);
             foreach (var edit in result.edits)
                 incorrectWords.Add(new IncorrectWordDto
                 {
@@ -106,7 +106,7 @@ internal class ResponseDto
     public List<IncorrectWordDto> IncorrectWordDto { get; set; }
 }
 
-internal class SpalingEdit
+internal class SaplingEdit
 {
     public string id { get; set; }
     public string sentence { get; set; }
@@ -116,7 +116,7 @@ internal class SpalingEdit
     public string replacement { get; set; }
 }
 
-internal class SpalingResponse
+internal class SaplingResponse
 {
-    public List<SpalingEdit> edits { get; set; }
+    public List<SaplingEdit> edits { get; set; }
 }
