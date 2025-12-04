@@ -33,4 +33,4 @@ NHunspell is suitable for quick, local Persian spell checking but has limitation
 
 Sapling provides higher detection accuracy and works better for long or conversational text, but requires an internet connection and an API key, and may occasionally miss certain cases.
 
-Combining both tools could create a preliminary pipeline for Persian text correction.
+In the end I think Sapling is the best tools or is more comfortable for finding incorrect word in the text.
